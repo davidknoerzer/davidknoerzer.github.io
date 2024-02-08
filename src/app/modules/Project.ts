@@ -10,7 +10,8 @@ export enum Techstack {
     PythonFlask = "Python Flask",
     NextJS = "Next.js",
     ScikitLearn = "scikit-learn",
-    JavaSpringBoot = "Java Spring Boot"
+    JavaSpring = "Java Spring",
+    MongoDb = "MongoDB",
 }
 
 export type Project = {

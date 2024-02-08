@@ -14,14 +14,14 @@ export default function ProjectSection() {
     const projects: Project[] = [
         {
             title: "Whatsapp Wrapped",
-            description: "Upload your exported Whatsapp History and see a fun Wrappup of the last year.",
+            description: "Upload your exported Whatsapp History and see a fun Wrap-up of the last year.",
             url: "/whatsapp-wrapped",
             image: whatsappWrappedImage,
             techstack: [Techstack.Python, Techstack.PythonFlask, Techstack.Angular],
         },
         {
             title: "Swiss Footy Predictor",
-            description: "See predictions about the next round of the Swiss Super League",
+            description: "See predictions about the next round of the Swiss Super League.",
             url: "/swiss-footy-predictor",
             image: whatsappWrappedImage,
             techstack: [Techstack.Python, Techstack.PythonFlask, Techstack.ScikitLearn, Techstack.React],
@@ -34,15 +34,15 @@ export default function ProjectSection() {
             techstack: [Techstack.Python, Techstack.PythonFlask, Techstack.Angular],
         },
         {
-            title: "What to cook",
-            description: "See whats cooking and get inspiration for your next meal",
+            title: "What to Cook",
+            description: "See whats cooking and get inspiration for your next meal.",
             url: "/what-to-cook",
             image: whatsappWrappedImage,
-            techstack: [Techstack.Java, Techstack.JavaSpringBoot, Techstack.React],
+            techstack: [Techstack.Java, Techstack.JavaSpring, Techstack.React],
         },
         {
             title: "Settling in Catan",
-            description: "Generate maps for your next Settlers of Catan Game",
+            description: "Generate maps for your next Settlers of Catan Game.",
             url: "/settling-in-catan",
             image: whatsappWrappedImage,
             techstack: [Techstack.JavaScript],
@@ -50,12 +50,14 @@ export default function ProjectSection() {
     ];
 
     return (
-        <div className="container content-center">
-            {
-                projects.map(item => (
-                    <ProjectCard {...{ title: item.title, description: item.description, url: item.url, image: item.image, techstack: item.techstack }} />
-                ))
-            }
+        <div className="container bg-black">
+            <div className="gap-8 columns-1 md:columns-2 bg-lime-200">
+                {
+                    projects.map(item => (
+                        <ProjectCard {...{ title: item.title, description: item.description, url: item.url, image: item.image, techstack: item.techstack }} key={item.url.substring(0)} />
+                    ))
+                }
+            </div>
         </div>
     );
 }
