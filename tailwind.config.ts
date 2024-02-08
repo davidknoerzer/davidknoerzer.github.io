@@ -16,8 +16,9 @@ const config: Config = {
     },
   },
   daisyui: {
-    themes: ["cyberpunk", "dark"],
+    themes: ["cyberpunk", "dim"],
   },
-  plugins: [require("daisyui")],
+  plugins: [require("@tailwindcss/typography"), require("daisyui")],
+
 };
 export default config;
