@@ -2,15 +2,15 @@
 
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 import myPicture from "../../images/my_picture.webp";
-import { Nanum_Gothic_Coding } from "next/font/google";
+import { Source_Code_Pro } from "next/font/google";
 
-const codingFont = Nanum_Gothic_Coding({
+const codingFont = Source_Code_Pro({
   weight: ["400"],
   subsets: ["latin"],
 });
 export default function HeroSection() {
-
   return (
     <div className="hero min-h-screen bg-base-200">
       <div className="hero-content flex-col lg:flex-row">
@@ -22,15 +22,19 @@ export default function HeroSection() {
         />
         <div>
           <h1 className={"text-7xl font-bold " + codingFont.className}>
-            hello there!
+            Hello There!
           </h1>
           <p className="py-6">
             Welcome to my Portfolio page. Here you can take a look at some fun
             projects I did to expand my programming skills :)
           </p>
-          <button className="btn btn-primary rounded" onClick={() => {
-            window.open('https://www.linkedin.com/in/davidknoerzer/', '_blank')
-          }}>My Linkedin</button>
+          <Link
+            target="_blank"
+            href="https://www.linkedin.com/in/davidknoerzer"
+            className="btn btn-primary rounded"
+          >
+            My Linkedin
+          </Link>
         </div>
       </div>
     </div>

@@ -4,8 +4,7 @@ import React from "react";
 import Image from "next/image";
 import { Project } from "../../modules/Project";
 import { useRouter } from "next/navigation";
-
-
+import Link from "next/link";
 
 export default function ProjectCard({
   title,
@@ -14,12 +13,14 @@ export default function ProjectCard({
   image,
   techstack,
 }: Project) {
-  const router = useRouter()
+  const router = useRouter();
 
   return (
-    <div className="card w-full bg-neutral text-neutral-content shadow-md break-inside-avoid hover:cursor-pointer rounded" onClick={() => {
-      window.open(url, '_blank')
-    }}>
+    <Link
+      href={url}
+      target="_blank"
+      className="card w-full bg-neutral text-neutral-content shadow-md break-inside-avoid hover:cursor-pointer rounded"
+    >
       <Image
         src={image}
         width={500}
@@ -38,6 +39,6 @@ export default function ProjectCard({
           ))}
         </div>
       </div>
-    </div>
+    </Link>
   );
 }
