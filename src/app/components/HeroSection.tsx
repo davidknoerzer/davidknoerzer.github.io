@@ -1,7 +1,12 @@
 import React from "react";
 import Image from "next/image";
 import myPicture from "../../images/my_picture.webp";
-import { codingFont } from "../layout";
+import { Nanum_Gothic_Coding } from "next/font/google";
+
+const codingFont = Nanum_Gothic_Coding({
+  weight: ["400"],
+  subsets: ["latin"],
+});
 
 export default function HeroSection() {
   return (
