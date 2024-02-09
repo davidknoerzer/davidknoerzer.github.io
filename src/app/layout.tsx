@@ -1,13 +1,9 @@
 import type { Metadata } from "next";
-import { Rubik, Nanum_Gothic_Coding } from "next/font/google";
+import { Rubik } from "next/font/google";
 import "./globals.css";
 
 const font = Rubik({
   weight: ["500"],
-  subsets: ["latin"],
-});
-export const codingFont = Nanum_Gothic_Coding({
-  weight: ["400"],
   subsets: ["latin"],
 });
 

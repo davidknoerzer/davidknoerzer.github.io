@@ -3,12 +3,11 @@ import Image from "next/image";
 import myPicture from "../../images/my_picture.webp";
 import { Nanum_Gothic_Coding } from "next/font/google";
 
-const codingFont = Nanum_Gothic_Coding({
-  weight: ["400"],
-  subsets: ["latin"],
-});
-
 export default function HeroSection() {
+  const codingFont = Nanum_Gothic_Coding({
+    weight: ["400"],
+    subsets: ["latin"],
+  });
   return (
     <div className="hero min-h-screen bg-base-200">
       <div className="hero-content flex-col lg:flex-row">
