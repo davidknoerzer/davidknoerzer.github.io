@@ -1,10 +1,10 @@
 import React from "react";
 
-import whatsappWrappedImage from "../../../images/novartis.webp";
-import swissFootyPredictorImage from "../../../images/novartis.webp";
-import imdbProposerImage from "../../../images/novartis.webp";
-import whatToCookImage from "../../../images/novartis.webp";
-import settlingInCatanImage from "../../../images/novartis.webp";
+import whatsappWrappedImage from "../../../images/whatsapp-wrapped.webp";
+import swissFootyPredictorImage from "../../../images/swiss-footy-predictor.webp";
+import imdbProposerImage from "../../../images/imdb.webp";
+import whatToCookImage from "../../../images/cooking.webp";
+import settlingInCatanImage from "../../../images/catan.webp";
 import ProjectCard from "./ProjectCard";
 import { Project, Techstack } from "../../modules/Project";
 
@@ -23,7 +23,7 @@ export default function ProjectSection() {
       description:
         "See predictions about the next round of the Swiss Super League.",
       url: "/swiss-footy-predictor",
-      image: whatsappWrappedImage,
+      image: swissFootyPredictorImage,
       techstack: [
         Techstack.Python,
         Techstack.PythonFlask,
@@ -36,29 +36,29 @@ export default function ProjectSection() {
       description:
         "Upload one or two rating list csv files and see proposals to watch the next movie (or rewatch a classic).",
       url: "/imdb-proposer",
-      image: whatsappWrappedImage,
+      image: imdbProposerImage,
       techstack: [Techstack.Python, Techstack.PythonFlask, Techstack.Angular],
     },
     {
       title: "What to Cook",
       description: "See whats cooking and get inspiration for your next meal.",
       url: "/what-to-cook",
-      image: whatsappWrappedImage,
+      image: whatToCookImage,
       techstack: [Techstack.Java, Techstack.JavaSpring, Techstack.React],
     },
     {
       title: "Settling in Catan",
       description: "Generate maps for your next Settlers of Catan Game.",
       url: "/settling-in-catan",
-      image: whatsappWrappedImage,
+      image: settlingInCatanImage,
       techstack: [Techstack.JavaScript],
     },
   ];
 
   return (
-    <div className="container min-h-screen p-4 bg-red-500">
+    <div className="container min-h-screen p-4">
       <h1 className="text-5xl m-4 font-bold">Projects</h1>
-      <div className="gap-4 space-y-4 columns-1 md:columns-2 2xl:columns-3 bg-green-500">
+      <div className="gap-4 space-y-4 columns-1 md:columns-2 2xl:columns-3">
         {projects.map((item) => (
           <ProjectCard
             {...{

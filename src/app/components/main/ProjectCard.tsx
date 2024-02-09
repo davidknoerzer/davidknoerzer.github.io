@@ -3,6 +3,9 @@
 import React from "react";
 import Image from "next/image";
 import { Project } from "../../modules/Project";
+import { useRouter } from "next/navigation";
+
+
 
 export default function ProjectCard({
   title,
@@ -11,14 +14,12 @@ export default function ProjectCard({
   image,
   techstack,
 }: Project) {
-  const handleCardClick = (url: string) => {
-    window.open(url, "_blank", "noopener,noreferrer");
-  };
+  const router = useRouter()
+
   return (
-    <div
-      className="card w-full bg-base-100 bg-pink-500 shadow-2xl break-inside-avoid hover:cursor-pointer rounded"
-      onClick={() => handleCardClick(url)}
-    >
+    <div className="card w-full bg-neutral text-neutral-content shadow-md break-inside-avoid hover:cursor-pointer rounded" onClick={() => {
+      window.open(url, '_blank')
+    }}>
       <Image
         src={image}
         width={500}
