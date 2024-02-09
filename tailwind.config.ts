@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+import daisyui from "daisyui";
 
 const config: Config = {
   content: [
@@ -9,7 +10,7 @@ const config: Config = {
   theme: {
     container: {
       center: true,
-      padding: '2rem',
+      padding: "1rem",
     },
     extend: {
       backgroundImage: {
@@ -20,9 +21,9 @@ const config: Config = {
     },
   },
   daisyui: {
-    themes: ["cyberpunk", "dim"],
+    themes: ["cyberpunk", "black"],
+    darkTheme: "black",
   },
   plugins: [require("@tailwindcss/typography"), require("daisyui")],
-
 };
 export default config;
