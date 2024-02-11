@@ -1,7 +1,6 @@
 import React from "react";
 import Image from "next/image";
 import { CVChapter } from "@/app/modules/CVChapter";
-import { time } from "console";
 
 export default function CVCard({
   title,
@@ -11,28 +10,29 @@ export default function CVCard({
   organization,
 }: CVChapter) {
   return (
-    <div className="card bg-neutral text-neutral-content shadow-md break-inside-avoid rounded">
-      <figure className="px-10 pt-10">
-        <Image
-          src={image}
-          width={500}
-          height={500}
-          alt="cv experience organization image"
-          className="rounded-2xl p-8 bg-white"
-        />
-      </figure>
+    <div className="card bg-base-200 shadow-2xl rounded-2xl break-inside-avoid">
       <div className="card-body">
-        <h2 className="card-title">
-          {title} <br />
-          {organization}
-        </h2>
-        {
-          description.map((item) => (
-            <div className="chat-bubble bg-base-100 text-base-content" key={item}>
-              {item}
-            </div>
-          ))}
-        <p className="card-actions justify-end">{timeframe}</p>
+        <h2 className="card-title">{title}</h2>
+        <p>{organization}</p>
+        <figure>
+          <Image
+            src={image}
+            width={500}
+            height={500}
+            alt="cv experience organization image"
+            className="rounded-2xl p-6 bg-white"
+          />
+        </figure>
+        {description.length > 0 && (
+          <ul className="list-disc p-4">
+            {description.map((item) => (
+              <li key={item}>{item}</li>
+            ))}
+          </ul>
+        )}
+        <div className="card-actions justify-end">
+          <div className="badge badge-outline">{timeframe}</div>
+        </div>
       </div>
     </div>
   );

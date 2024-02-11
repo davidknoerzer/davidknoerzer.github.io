@@ -21,9 +21,7 @@ export default function HeroSection() {
           className="max-w-xs md:max-w-sm  rounded"
         />
         <div>
-          <h1 className={"text-7xl font-bold " + codingFont.className}>
-            Hello There!
-          </h1>
+          <h1 className={"text-7xl " + codingFont.className}>Hello There!</h1>
           <p className="py-6">
             Welcome to my Portfolio page. Here you can take a look at some fun
             projects I did to expand my programming skills :)

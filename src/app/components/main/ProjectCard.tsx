@@ -19,14 +19,14 @@ export default function ProjectCard({
     <Link
       href={url}
       target="_blank"
-      className="card w-full bg-neutral text-neutral-content shadow-md break-inside-avoid hover:cursor-pointer rounded"
+      className="card w-full bg-base-200 shadow-2xl hover:cursor-pointer rounded-2xl break-inside-avoid"
     >
       <Image
         src={image}
         width={500}
         height={500}
         alt="project picture"
-        className="rounded rounded-b-none"
+        className="rounded-2xl rounded-b-none"
       />
       <div className="card-body">
         <h2 className="card-title">{title}</h2>

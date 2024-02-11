@@ -3,13 +3,17 @@ import HeroSection from "./components/HeroSection";
 import Footer from "./components/Footer";
 import ProjectSection from "./components/main/ProjectSection";
 import CVSection from "./components/main/CVSection";
+import CVTimeline from "./components/main/CVTimeline";
 
 export default function Home() {
   return (
     <>
       <HeroSection></HeroSection>
-      <ProjectSection></ProjectSection>
-      <CVSection></CVSection>
+      <div className="container min-h-screen p-4">
+        <ProjectSection></ProjectSection>
+        <CVSection></CVSection>
+        <CVTimeline></CVTimeline>
+      </div>
       <Footer></Footer>
     </>
   );

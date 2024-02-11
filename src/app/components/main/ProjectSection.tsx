@@ -16,7 +16,11 @@ export default function ProjectSection() {
         "Upload your exported Whatsapp History and see a fun Wrap-up of the last year.",
       url: "/whatsapp-wrapped",
       image: whatsappWrappedImage,
-      techstack: [Techstack.Python, Techstack.PythonFlask, Techstack.Angular],
+      techstack: [
+        Techstack.Python,
+        Techstack.PythonFlask,
+        Techstack.JavaScript,
+      ],
     },
     {
       title: "Swiss Footy Predictor",
@@ -37,7 +41,7 @@ export default function ProjectSection() {
         "Upload one or two rating list csv files and see proposals to watch the next movie (or rewatch a classic).",
       url: "/imdb-proposer",
       image: imdbProposerImage,
-      techstack: [Techstack.Python, Techstack.PythonFlask, Techstack.Angular],
+      techstack: [Techstack.Python, Techstack.PythonFlask, Techstack.React],
     },
     {
       title: "What to Cook",
@@ -51,14 +55,14 @@ export default function ProjectSection() {
       description: "Generate maps for your next Settlers of Catan Game.",
       url: "/settling-in-catan",
       image: settlingInCatanImage,
-      techstack: [Techstack.JavaScript],
+      techstack: [Techstack.NextJS, Techstack.React],
     },
   ];
 
   return (
-    <div className="container min-h-screen p-4">
+    <>
       <h1 className="text-5xl m-4 font-bold">Projects</h1>
-      <div className="gap-4 space-y-4 columns-1 md:columns-2 2xl:columns-3">
+      <div className="gap-6 space-y-6 columns-1 md:columns-2 2xl:columns-3">
         {projects.map((item) => (
           <ProjectCard
             {...{
@@ -72,6 +76,6 @@ export default function ProjectSection() {
           />
         ))}
       </div>
-    </div>
+    </>
   );
 }
