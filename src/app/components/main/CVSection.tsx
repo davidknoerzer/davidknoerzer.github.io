@@ -8,7 +8,7 @@ import uzhImage from "../../../images/uzh.webp";
 import CVCard from "./CVCard";
 
 export default function CVSection() {
-  const workChapters: CVChapter[] = [
+  let cvChapters: CVChapter[] = [
     {
       title: "Junior Software Engineer",
       organization: "Innovation Process Technology AG",
@@ -18,7 +18,9 @@ export default function CVSection() {
         "Entwicklung Custom Connector mit Java",
         "DevOps Pipeline Entwicklung für Mule Apps",
       ],
-      timeframe: "11.2022 - heute",
+      startDate: new Date(2022, 11, 1),
+      endDate: new Date(),
+      isCurrentOccupation: true,
       image: iptImage,
     },
     {
@@ -27,70 +29,65 @@ export default function CVSection() {
       description: [
         "Fullstack Entwicklung mit Angular 4, Java Spring und MongoDB",
       ],
-      timeframe: "09.2017 - 12.2017",
+      startDate: new Date(2017, 9, 1),
+      endDate: new Date(2017, 12, 1),
+      isCurrentOccupation: false,
       image: bNovaImage,
     },
     {
       title: "Informatiker Generalist Lehrling",
       organization: "Novartis Pharma AG",
       description: ["UX-Design", "IT-Support", "Hardware-Testing"],
-      timeframe: "09.2013 - 08.2017",
+      startDate: new Date(2013, 9, 1),
+      endDate: new Date(2017, 8, 1),
+      isCurrentOccupation: false,
       image: novartisImage,
     },
-  ];
-  const schoolChapters: CVChapter[] = [
     {
       title: "Business Information Systems",
       organization: "MSc, FHNW",
       description: [],
-      timeframe: "2023 - heute",
+      startDate: new Date(2023, 9, 1),
+      endDate: new Date(),
+      isCurrentOccupation: true,
       image: fhnwImage,
     },
     {
       title: "Information Systems",
       organization: "MSc, UZH",
       description: [],
-      timeframe: "2022 - 2023",
+      startDate: new Date(2022, 9, 1),
+      endDate: new Date(2023, 8, 1),
+      isCurrentOccupation: false,
       image: uzhImage,
     },
     {
       title: "Business Information Technology",
       organization: "BSc, FHNW",
       description: [],
-      timeframe: "2018 - 2021",
+      startDate: new Date(2018, 9, 1),
+      endDate: new Date(2021, 8, 1),
+      isCurrentOccupation: false,
       image: fhnwImage,
     },
   ];
+
+  cvChapters = cvChapters.sort((a, b) => (a.endDate > b.endDate) ? -1 : 1)
   return (
     <>
       <h2 className="text-5xl m-4 font-bold">CV</h2>
-      <h3 className="text-3xl m-4">Beruflicher Werdegang</h3>
       <div className="gap-6 space-y-6 columns-1 md:columns-2 2xl:columns-3">
-        {workChapters.map((item) => (
-          <CVCard
+        {cvChapters.map((item) => (
+          <CVCard key={item.title}
             {...{
               title: item.title,
-              description: item.description,
               organization: item.organization,
-              image: item.image,
-              timeframe: item.timeframe,
-            }}
-            key={item.title}
-          />
-        ))}
-      </div>
-      <h3 className="text-3xl m-4">Akademischer Werdegang</h3>
-      <div className="gap-6 space-y-4 columns-1 md:columns-2 2xl:columns-3">
-        {schoolChapters.map((item) => (
-          <CVCard
-            {...{
-              title: item.title,
               description: item.description,
-              organization: item.organization,
+              startDate: item.startDate,
+              endDate: item.endDate,
+              isCurrentOccupation: item.isCurrentOccupation,
               image: item.image,
-              timeframe: item.timeframe,
             }}
-            key={item.title}
           />
         ))}
       </div>

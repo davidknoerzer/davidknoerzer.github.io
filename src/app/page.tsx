@@ -12,7 +12,6 @@ export default function Home() {
       <div className="container min-h-screen p-4">
         <ProjectSection></ProjectSection>
         <CVSection></CVSection>
-        <CVTimeline></CVTimeline>
       </div>
       <Footer></Footer>
     </>

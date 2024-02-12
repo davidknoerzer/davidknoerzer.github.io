@@ -4,6 +4,8 @@ export type CVChapter = {
   title: string;
   organization: string;
   description: string[];
-  timeframe: string;
+  startDate: Date;
+  endDate: Date;
+  isCurrentOccupation: boolean;
   image: StaticImageData;
 };
