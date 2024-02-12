@@ -22,13 +22,12 @@ export default function CVCard({
 
 
   return (
-    <div className="card bg-base-100 shadow-2xl image-full break-inside-avoid">
-      <figure className="m-20">
+    <div className="card bg-base-100 shadow-2xl break-inside-avoid">
+      <figure>
         <Image
           src={image}
-          width={500}
-          height={500}
           alt="cv experience organization image"
+          className="p-10"
         />
       </figure>
       <div className="card-body">
