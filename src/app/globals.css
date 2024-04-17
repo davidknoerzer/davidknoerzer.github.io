@@ -6,11 +6,6 @@
     background-image: url('../images/mountains.webp');
 }
 
-.cv-background {
-    background-image: url('../images/library.webp');
-}
-
-.projects-background {
-    background-image: url('../images/code.webp');
-
+.body-background {
+    background: linear-gradient(45deg, #a2cad7, #5cb1c8, #44a7bf)
 }

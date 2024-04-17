@@ -23,8 +23,7 @@ export default function HeroSection() {
         <div>
           <h1 className={"text-7xl " + codingFont.className}>Hello There!</h1>
           <p className="py-6">
-            Welcome to my Portfolio page. Here you can take a look at some fun
-            projects I did to expand my programming skills :)
+            Willkommen auf meiner Portfolio-Seite. Hier kannst du einen Blick auf einige lustige Projekte ansehen, mit denen ich meine Programmierkenntnisse erweitert habe :)
           </p>
           <Link
             target="_blank"

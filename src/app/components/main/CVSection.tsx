@@ -18,7 +18,7 @@ export default function CVSection() {
         "Entwicklung Custom Connector mit Java",
         "DevOps Pipeline Entwicklung für Mule Apps",
       ],
-      startDate: new Date(2022, 11, 1),
+      startDate: new Date(2022, 10),
       endDate: new Date(),
       isCurrentOccupation: true,
       image: iptImage,
@@ -29,8 +29,8 @@ export default function CVSection() {
       description: [
         "Fullstack Entwicklung mit Angular 4, Java Spring und MongoDB",
       ],
-      startDate: new Date(2017, 9, 1),
-      endDate: new Date(2017, 12, 1),
+      startDate: new Date(2017, 8),
+      endDate: new Date(2017, 11),
       isCurrentOccupation: false,
       image: bNovaImage,
     },
@@ -38,8 +38,8 @@ export default function CVSection() {
       title: "Informatiker Generalist Lehrling",
       organization: "Novartis Pharma AG",
       description: ["UX-Design", "IT-Support", "Hardware-Testing"],
-      startDate: new Date(2013, 9, 1),
-      endDate: new Date(2017, 8, 1),
+      startDate: new Date(2013, 7),
+      endDate: new Date(2017, 6),
       isCurrentOccupation: false,
       image: novartisImage,
     },
@@ -47,7 +47,7 @@ export default function CVSection() {
       title: "Business Information Systems",
       organization: "MSc, FHNW",
       description: [],
-      startDate: new Date(2023, 9, 1),
+      startDate: new Date(2023, 8),
       endDate: new Date(),
       isCurrentOccupation: true,
       image: fhnwImage,
@@ -56,8 +56,8 @@ export default function CVSection() {
       title: "Information Systems & Informatics",
       organization: "MSc, UZH",
       description: [],
-      startDate: new Date(2022, 9, 1),
-      endDate: new Date(2023, 8, 1),
+      startDate: new Date(2022, 8),
+      endDate: new Date(2023, 7),
       isCurrentOccupation: false,
       image: uzhImage,
     },
@@ -65,18 +65,18 @@ export default function CVSection() {
       title: "Business Information Technology",
       organization: "BSc, FHNW",
       description: [],
-      startDate: new Date(2018, 9, 1),
-      endDate: new Date(2021, 8, 1),
+      startDate: new Date(2018, 8),
+      endDate: new Date(2021, 7),
       isCurrentOccupation: false,
       image: fhnwImage,
     },
   ];
 
-  cvChapters = cvChapters.sort((a, b) => (a.endDate > b.endDate) ? -1 : 1)
+  cvChapters.sort((a, b) => b.endDate.getTime() - a.endDate.getTime());
 
   return (
     <div className="container p-4 space-y-4">
-      <h2 className="text-6xl p-4 font-bold bg-base-200 shadow-2xl rounded-2xl">CV</h2>
+      <h2 className="text-6xl p-4 font-bold bg-base-300  shadow-2xl rounded-2xl">CV</h2>
       <div className="gap-6 space-y-6 columns-1 md:columns-2 2xl:columns-3">
         {cvChapters.map((item) => (
           <CVCard key={item.title}

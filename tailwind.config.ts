@@ -14,14 +14,12 @@ const config: Config = {
     },
     extend: {
       backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+        "custom-gradient": `linear-gradient(to bottom-left, #6ee7b7, #3b82f6)`
       },
     },
   },
   daisyui: {
-    themes: false
+    themes: ["light",],
   },
   plugins: [require("@tailwindcss/typography"), require("daisyui")],
 };

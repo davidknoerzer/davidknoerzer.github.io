@@ -15,9 +15,9 @@ export default function CVCard({
   if (startDate !== undefined && endDate !== undefined) {
     let endDateString = isCurrentOccupation
       ? "today"
-      : endDate.getMonth() + "." + endDate.getFullYear();
+      : endDate.getMonth() + 1 + "." + endDate.getFullYear();
     timeframe =
-      startDate.getMonth() +
+      startDate.getMonth() + 1 +
       "." +
       startDate.getFullYear() +
       " - " +
@@ -25,7 +25,7 @@ export default function CVCard({
   }
 
   return (
-    <div className="card bg-base-200 shadow-2xl break-inside-avoid">
+    <div className="card bg-base-300 shadow-2xl break-inside-avoid">
       <div className="card-body">
         <h2 className="card-title">{title}</h2>
         <p>{organization}</p>

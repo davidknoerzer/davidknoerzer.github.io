@@ -65,24 +65,24 @@ export default function ProjectSection() {
   ];
 
   return (
-      <div className="container p-4 space-y-4 ">
-        <h1 className="text-6xl p-4 font-bold bg-base-200 shadow-2xl rounded-2xl">Projects</h1>
-        <div className="gap-6 space-y-6 columns-1 md:columns-2 2xl:columns-3">
-          {projects.map((item) => (
-            <ProjectCard
-              {...{
-                title: item.title,
-                description: item.description,
-                url: item.url,
-                image: item.image,
-                done: item.done,
-                techstack: item.techstack,
-              }}
-              key={item.url.substring(0)}
-            />
-          ))}
-        </div>
+    <div className="container p-4 space-y-4 ">
+      <h1 className="text-6xl p-4 font-bold bg-base-300 shadow-2xl rounded-2xl">Projects</h1>
+      <div className="gap-6 space-y-6 columns-1 md:columns-2 2xl:columns-3">
+        {projects.map((item) => (
+          <ProjectCard
+            {...{
+              title: item.title,
+              description: item.description,
+              url: item.url,
+              image: item.image,
+              done: item.done,
+              techstack: item.techstack,
+            }}
+            key={item.url.substring(0)}
+          />
+        ))}
       </div>
+    </div>
 
   );
 }
