@@ -12,13 +12,13 @@ const codingFont = Source_Code_Pro({
 });
 export default function HeroSection() {
   return (
-    <div className="hero min-h-screen bg-base-200">
-      <div className="hero-content flex-col lg:flex-row">
+    <div className="hero min-h-screen bg-fixed hero-background">
+      <div className="hero-content flex-col lg:flex-row bg-base-200 bg-opacity-80 m-4 rounded-xl">
         <Image
           priority
           src={myPicture}
           alt="my picture"
-          className="max-w-xs md:max-w-sm  rounded"
+          className="max-w-xs md:max-w-sm rounded-xl"
         />
         <div>
           <h1 className={"text-7xl " + codingFont.className}>Hello There!</h1>

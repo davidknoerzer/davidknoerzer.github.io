@@ -53,7 +53,7 @@ export default function CVSection() {
       image: fhnwImage,
     },
     {
-      title: "Information Systems",
+      title: "Information Systems & Informatics",
       organization: "MSc, UZH",
       description: [],
       startDate: new Date(2022, 9, 1),
@@ -73,9 +73,10 @@ export default function CVSection() {
   ];
 
   cvChapters = cvChapters.sort((a, b) => (a.endDate > b.endDate) ? -1 : 1)
+
   return (
-    <>
-      <h2 className="text-5xl m-4 font-bold">CV</h2>
+    <div className="container p-4 space-y-4">
+      <h2 className="text-6xl p-4 font-bold bg-base-200 shadow-2xl rounded-2xl">CV</h2>
       <div className="gap-6 space-y-6 columns-1 md:columns-2 2xl:columns-3">
         {cvChapters.map((item) => (
           <CVCard key={item.title}
@@ -91,6 +92,7 @@ export default function CVSection() {
           />
         ))}
       </div>
-    </>
+    </div >
+
   );
 }

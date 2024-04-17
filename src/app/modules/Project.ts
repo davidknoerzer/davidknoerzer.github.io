@@ -19,5 +19,6 @@ export type Project = {
     description: string,
     url: string,
     image: StaticImageData,
+    done: boolean,
     techstack: Techstack[]
 }

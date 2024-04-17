@@ -1,3 +1,16 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.hero-background {
+    background-image: url('../images/mountains.webp');
+}
+
+.cv-background {
+    background-image: url('../images/library.webp');
+}
+
+.projects-background {
+    background-image: url('../images/code.webp');
+
+}

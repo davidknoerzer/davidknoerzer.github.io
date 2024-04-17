@@ -3,7 +3,6 @@
 import React from "react";
 import Image from "next/image";
 import { Project } from "../../modules/Project";
-import { useRouter } from "next/navigation";
 import Link from "next/link";
 
 export default function ProjectCard({
@@ -11,15 +10,15 @@ export default function ProjectCard({
   description,
   url,
   image,
+  done,
   techstack,
 }: Project) {
-  const router = useRouter();
 
   return (
     <Link
       href={url}
       target="_blank"
-      className="card w-full bg-base-200 shadow-2xl hover:cursor-pointer rounded-2xl break-inside-avoid"
+      className={"card w-full bg-base-200 shadow-2xl rounded-2xl break-inside-avoid"}
     >
       <Image
         src={image}
@@ -28,6 +27,11 @@ export default function ProjectCard({
         alt="project picture"
         className="rounded-2xl rounded-b-none"
       />
+      {!done && (
+        <div className="absolute w-full h-full flex items-center justify-center bg-black bg-opacity-50 rounded-2xl">
+          <span className="text-accent text-7xl font-semibold -rotate-45">TODO</span>
+        </div>
+      )}
       <div className="card-body">
         <h2 className="card-title">{title}</h2>
         <p className="card-side">{description}</p>

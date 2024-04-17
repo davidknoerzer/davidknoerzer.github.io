@@ -1,7 +1,6 @@
 import React from "react";
 import Image from "next/image";
 import { CVChapter } from "@/app/modules/CVChapter";
-import { start } from "repl";
 
 export default function CVCard({
   title,
