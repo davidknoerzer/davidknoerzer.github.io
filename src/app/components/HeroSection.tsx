@@ -13,7 +13,7 @@ const codingFont = Source_Code_Pro({
 export default function HeroSection() {
   return (
     <div className="hero min-h-screen bg-fixed hero-background">
-      <div className="hero-content flex-col lg:flex-row bg-base-200 bg-opacity-80 m-4 rounded-xl">
+      <div className="hero-content flex-col lg:flex-row bg-base-200 bg-opacity-85 m-4 rounded-xl">
         <Image
           priority
           src={myPicture}

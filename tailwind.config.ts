@@ -12,11 +12,6 @@ const config: Config = {
       center: true,
       padding: "1rem",
     },
-    extend: {
-      backgroundImage: {
-        "custom-gradient": `linear-gradient(to bottom-left, #6ee7b7, #3b82f6)`
-      },
-    },
   },
   daisyui: {
     themes: ["light",],
