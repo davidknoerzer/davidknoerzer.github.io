@@ -9,3 +9,25 @@
 .body-background {
     background: linear-gradient(#70b7cb, #63b5cb, #54a9c5, #319ab9)
 }
+
+/* .typewriter-animation {
+    border-right: 5px solid;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    animation:
+        typing 2s steps(12),
+        cursor .5s
+}
+
+@keyframes cursor {
+    50% {
+        border-color: transparent
+    }
+}
+
+@keyframes typing {
+    from {
+        width: 0
+    }
+} */

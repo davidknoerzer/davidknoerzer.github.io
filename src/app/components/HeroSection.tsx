@@ -20,8 +20,8 @@ export default function HeroSection() {
           alt="my picture"
           className="max-w-xs md:max-w-sm rounded-xl"
         />
-        <div>
-          <h1 className={"text-7xl " + codingFont.className}>Hello There!</h1>
+        <div className="inline-block">
+          <h1 className={codingFont.className + " text-7xl"}>Hello There!</h1>
           <p className="py-6">
             Willkommen auf meiner Portfolio-Seite. Hier kannst du einen Blick auf einige lustige Projekte ansehen, mit denen ich meine Programmierkenntnisse erweitert habe :)
           </p>
