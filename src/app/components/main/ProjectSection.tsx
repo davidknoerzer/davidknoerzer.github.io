@@ -11,6 +11,14 @@ import { Project, Techstack } from "../../modules/Project";
 export default function ProjectSection() {
   const projects: Project[] = [
     {
+      title: "Settling in Catan",
+      description: "Generate maps for your next Settlers of Catan Game.",
+      url: "https://davidknoerzer.github.io/settling-in-catan/",
+      image: settlingInCatanImage,
+      done: true,
+      techstack: [Techstack.NextJS, Techstack.React],
+    },
+    {
       title: "Whatsapp Wrapped",
       description:
         "Upload your exported Whatsapp History and see a fun Wrap-up of the last year.",
@@ -54,14 +62,7 @@ export default function ProjectSection() {
       done: false,
       techstack: [Techstack.Java, Techstack.JavaSpring, Techstack.React],
     },
-    {
-      title: "Settling in Catan",
-      description: "Generate maps for your next Settlers of Catan Game.",
-      url: "/settling-in-catan",
-      image: settlingInCatanImage,
-      done: false,
-      techstack: [Techstack.NextJS, Techstack.React],
-    },
+
   ];
 
   return (
